@@ -18,9 +18,9 @@ float4 kiminus = float4(0, 3, 10, 2.5);
 kiminus.xz = mul(kiminus.xz ,rot);
 
 float4x4 toKiminus = float4x4(	1, 0, 0, 0,
-								0, 1, 0, 0,
-								0, 0, 1, 0,
-								kiminus.x, kiminus.y, kiminus.z, 1);
+				0, 1, 0, 0,
+				0, 0, 1, 0,
+				kiminus.x, kiminus.y, kiminus.z, 1);
 
 
 //First moon setup
@@ -35,9 +35,9 @@ moon = mul(moon, toKiminus);
 moon.w = 0.5; //the SDF spheres radius is stored in the w component
 
 float4x4 toMoon = float4x4(	1, 0, 0, 0,
-							0, 1, 0, 0,
-							0, 0, 1, 0,
-							moon.x, moon.y, moon.z, 1);
+				0, 1, 0, 0,
+				0, 0, 1, 0,
+				moon.x, moon.y, moon.z, 1);
 
 
 //Second moon setup
